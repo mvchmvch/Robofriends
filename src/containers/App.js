@@ -5,6 +5,8 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll'
 import './App.css'
 
+import * as serviceWorker from '../serviceWorker';
+
 import {setSearchField} from '../actions';
 
 const mapStateToProps = state => {
@@ -33,6 +35,7 @@ class App extends Component {
 			.then(users => this.setState({robots: users}))
 			.catch(err => console.log("Can't get users. Error is: ", err))
 		
+
 	}
 	render() {
 		const {robots} = this.state;
@@ -53,4 +56,9 @@ class App extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.register();
 
