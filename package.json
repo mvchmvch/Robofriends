@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://mvchmvch.github.io/robofriends",
   "dependencies": {
+    "@babel/runtime": "^7.8.3",
     "gh-pages": "^2.2.0",
     "jest": "^24.9.0",
     "react": "^16.12.0",
